@@ -1,0 +1,182 @@
+// Import all of Bootstrap’s CSS
+@import "bootstrap/scss/bootstrap";
+
+// Импорт кастомных переменных
+@import "./variables";
+
+// ============================================
+// КАСТОМНЫЕ СТИЛИ ДЛЯ ПОРТФОЛИО
+// ============================================
+
+// Глобальные стили
+body {
+  font-family: $font-family-sans-serif;
+  color: $dark;
+  background-color: $light;
+  overflow-x: hidden;
+}
+
+// Герой-секция
+.hero-section {
+  background: $gradient-primary;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,...'); // Паттерн
+    opacity: 0.1;
+  }
+
+  h1 {
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .lead {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.25rem;
+  }
+}
+
+// Карточки проектов
+.project-card {
+  background: white;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px -15px rgba(0,0,0,0.2);
+  }
+
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .card-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .badge {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+  }
+}
+
+// Секция "Обо мне"
+.about-section {
+  padding: 6rem 0;
+  background: white;
+
+  .about-image {
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow;
+  }
+
+  .skill-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba($primary, 0.1);
+    color: $primary;
+    border-radius: 2rem;
+    margin: 0.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $primary;
+      color: white;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Контакты
+.contact-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, $light 0%, white 100%);
+
+  .contact-form {
+    background: white;
+    padding: 3rem;
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow;
+  }
+
+  .form-control {
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid rgba($primary, 0.1);
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 0.2rem rgba($primary, 0.15);
+    }
+  }
+}
+
+// Футер
+footer {
+  background: $dark;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+// Анимации
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .hero-section {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .about-section,
+  .contact-section {
+    padding: 3rem 0;
+  }
+}

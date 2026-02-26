@@ -1,0 +1,31 @@
+// Кастомные цвета для портфолио
+$primary: #6366f1;        // Индиго - основной цвет
+$secondary: #ec4899;      // Розовый - акцентный цвет
+$success: #10b981;        // Изумрудный
+$info: #3b82f6;           // Синий
+$warning: #f59e0b;        // Янтарный
+$danger: #ef4444;         // Красный
+$light: #f8fafc;          // Светло-серый
+$dark: #1e293b;           // Тёмный
+
+// Градиенты
+$gradient-primary: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+
+// Типографика
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+$h1-font-size: 3rem;
+$h2-font-size: 2.25rem;
+
+// Компоненты
+$border-radius: 0.75rem;
+$border-radius-lg: 1rem;
+$box-shadow: 0 10px 40px -10px rgba(0,0,0,0.15);
+
+// Навигация
+$navbar-light-color: rgba($dark, 0.7);
+$navbar-light-hover-color: rgba($dark, 1);
+
+// Кнопки
+$btn-padding-y: 0.875rem;
+$btn-padding-x: 1.75rem;
+$btn-border-radius: 2rem;
