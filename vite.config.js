@@ -7,7 +7,7 @@ export default {
   root: resolve(__dirname, 'src'),
   base: '/Vite_portfolio/',  // Убедитесь, что имя репозитория точно такое же
   build: {
-    outDir: resolve(__dirname, '../dist'),
+    outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,  // Очищает папку перед сборкой
   },
   server: {
